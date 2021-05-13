@@ -1,0 +1,110 @@
+.packages{
+    grid-column: 2 / 10;
+    padding: 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 5rem;
+
+    @include respond(tab-port){
+        grid-column: 1 / -1;
+        padding: 5rem;
+    }
+    @include respond(phone){
+        
+        padding: 0;
+    }
+
+    &__card-container{
+        background-color: $color-primary;
+        padding: 1.5rem;
+
+        @include respond(tab-port){
+            margin: 0 auto;
+        }
+        @include respond(phone){
+            grid-column: 2/10;
+            place-self: center;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        @include respond(phone-sec){
+            width: 83%;
+            transform: translateX(-5%);
+        }
+    }
+
+    &__details{
+        border: 4px solid $color-primary-dark;
+        padding: 5rem 3rem;
+        display: grid;
+
+        @include respond(tab-port){
+            padding: 6rem 4rem;
+
+        }
+        @include respond(phone){
+            padding: 4rem 2.5rem;
+        }
+    }
+
+    &__label{
+        color: $color-primary-light;
+        font-family: $font-focus;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1.3rem 0 4rem 0;
+    }
+    
+    &__list{
+        list-style: none;
+        display: grid;
+        grid-gap: 2rem;
+    }
+
+    &__item{
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        place-items: center;
+        grid-gap: 2rem;
+        
+        &--strike{
+            color: rgba($color-primary-dark, .5);
+        }
+
+        .svg--strike{
+            fill: rgba($color-primary-dark, .5);
+        }
+
+        svg{
+            width: 2.5rem;
+            height: 2.5rem;
+            
+            
+        }
+    }
+
+    &__text{
+        font-size: 1.3rem;
+        @include respond(tab-port){
+            font-size: 1.5rem;
+
+        }
+        &--strike{
+            text-decoration: line-through;
+        }
+        
+    }
+
+    &__price{
+        padding: 2rem 0 1rem 0;
+        align-self: center;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    &__btn{
+        align-self: center;
+        justify-self: center;
+    }
+}

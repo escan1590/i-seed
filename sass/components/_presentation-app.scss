@@ -1,0 +1,99 @@
+.presentation-app{
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-row-gap: 1rem;
+    @include respond(phone){
+        grid-column: 1 / - 1;
+        padding: 0 3rem;
+    }
+    &__text{
+        font-size: 2rem;
+        grid-column: 1/-1;
+        &--desc{
+            text-align: center;
+            padding: 0 4rem;
+        }
+
+        @include respond(phone){
+            padding-top: 1rem;
+            font-size: 1.4rem;
+            text-align: left;
+        }
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__listIt{
+        padding: .5rem 2rem;
+        font-size: 1.8rem;
+    }
+    &__interface{
+        display:grid;
+        grid-template-columns: 20% 1fr ;
+        grid-gap: 2rem;
+        padding: 10rem;
+        background-color: $color-white-warm;
+        @include respond(tab-port){
+            padding: 4rem;
+        }
+        @include respond(phone){
+            padding: 2rem;
+        }
+    }
+
+    &__itembox1{
+
+        &--1{
+            
+        }
+
+        &--2{
+
+        }
+
+        
+    }
+
+    &__theme{
+        margin-top: 5rem;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        min-height: 60rem;
+        grid-gap: 2rem;
+        padding: 10rem;
+        background-color: $color-white-warm;
+        @include respond(tab-port){
+            padding: 4rem;
+        }
+        @include respond(phone){
+            padding: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
+    }
+
+    &__itembox2{
+
+        &--1{
+            z-index: 10
+        }
+
+        &--2{
+            z-index: 11;
+        }
+
+        &--3{
+            z-index: 12;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: .5rem;
+        box-shadow: .2rem 1rem 4.9rem -.7rem rgba(0,0,0,0.33);
+    }
+}

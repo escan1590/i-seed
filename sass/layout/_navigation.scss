@@ -1,0 +1,83 @@
+.navigation{
+    background-color: $color-primary-light;
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, minmax(min-content, 1fr)) minmax(6rem,1fr);
+    align-content: center;
+    justify-content: center;
+    padding: 2rem 0;
+    @include respond(tab-port){
+       display:none;
+    }
+    &__list{
+        grid-column: 2 / 5;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    &__item{
+        align-self: center;
+    }
+
+    &__link{
+        text-decoration: none;
+        font-size: 2.3rem;
+        text-transform: capitalize;
+        color: $color-primary-dark;
+        font-weight: 400;
+        border-bottom: 1px solid transparent;
+        transition: all .2s ease-in-out;
+        @include respond(tab-land){
+            font-size: 2rem;
+        }
+
+        &:hover{
+            border-bottom: 4px solid $color-primary-dark;
+        }
+
+        &--logo{
+            grid-column: 5 / 7;
+            display: inline-block;
+            align-self: center;
+            justify-self: end;
+            transition: filter .5s;
+
+            &:hover{
+                filter: brightness(90%);
+            }
+        }
+    }
+
+
+    &__logo{
+        height: 15rem;
+        display: block;
+        @include respond(tab-land){
+            height: 10rem;
+        }
+
+
+    }
+
+    &__button{
+        border:none;
+        border-radius: 0;
+        grid-column: 7 / 10;
+        align-self: center;
+        padding: 2rem 4rem;
+        display: inline-block;
+        min-width: 35rem;
+        justify-self: end;
+        background-color: $color-primary-dark;
+        color: #fff;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all .5s;
+        @include respond(tab-land){
+            min-width: 25rem;
+        }
+        
+    
+    }
+}

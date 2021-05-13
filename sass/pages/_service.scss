@@ -1,0 +1,66 @@
+.container_service{
+    display: grid;
+    grid-template-rows: repeat(12,min-content) ;
+    grid-template-columns: [full-start] repeat(10, [col-start] minmax(min-content,1fr) [col-end] ) [full-end];
+}
+
+.section-transition{
+    padding: 5rem 0;
+    @include respond(tab-port){
+        padding: 2rem 0;
+    }
+    grid-column: full-start/full-end;
+   background-color: $color-primary-light;
+   display: grid;
+   grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+}
+
+.section-motivation{
+    padding: 5rem 0;
+    grid-column: full-start / full-end;
+    background-color: $color-primary-dark;
+    color: #fff;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+}
+
+.section-convince{
+    padding: 10rem 0;
+    grid-column: full-start / full-end;
+    background-color: $color-primary-dark;
+    color: #fff;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+}
+
+.section-packages{
+    padding: 10rem 0;
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+    
+}
+
+.section-testimonialLong{
+    padding: 10rem 0; 
+    grid-column: full-start / full-end;
+    display: grid;
+    background-color: $color-primary-light;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+
+    @include respond(tab-port){
+        padding: 10rem 2rem; 
+    }
+}
+
+.section-steps_pres{
+    padding: 10rem 0; 
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-row-gap: 10rem ;
+    background-color: $color-primary-light;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+    @include respond(phone){
+        grid-row-gap: 2rem !important;
+    }
+}

@@ -1,0 +1,116 @@
+.container_product{
+    display: grid;
+    grid-template-rows: repeat(12,min-content);
+    grid-template-columns: [full-start] repeat(10, [col-start] minmax(min-content,1fr) [col-end] ) [full-end]; 
+}
+
+.section-project_pres{
+    grid-column: full-start / full-end;
+    display: grid;
+    padding: 10rem 0;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+}
+
+.section-goal{
+    background-color: $color-primary-light;
+    grid-column: full-start / full-end;
+    display: grid;
+    padding: 10rem 0;
+    grid-row-gap: 2rem;
+    place-items: center;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+    @include respond(tab-port){
+        padding: 5rem 0;
+    }
+}
+
+.section-presentation{
+    display:grid;
+    grid-column: full-start / full-end;
+    background-color: #fff;
+    grid-template-columns: minmax(6rem,1fr) [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end] minmax(6rem,1fr);
+    padding: 20rem 0;
+    grid-row-gap: 5rem;
+    @include respond(tab-port){
+        padding: 5rem 0;
+    }
+}
+
+/*bored to build components*/
+
+.presentation{
+    grid-column: full-start / col-end 6;
+    display: grid;
+    grid-row-gap: 2rem;
+    padding: 5rem 0;
+    @include respond(phone){
+        grid-column: full-start / full-end;
+    }
+    &__text{
+        font-size: 2rem;
+    }
+}
+
+/*End bored to build components*/
+
+.section-branding{
+    grid-column: full-start / full-end;
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end] minmax(6rem,1fr);
+}
+.section-miniGal{
+    background-color: $color-white-warm;
+    grid-column: full-start / full-end;
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end] minmax(6rem,1fr);
+}
+
+.section-presentation_app{
+    grid-column: full-start / full-end;
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end] minmax(6rem,1fr);
+}
+
+.section-results{
+    grid-column: full-start / full-end;
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end] minmax(6rem,1fr);
+    background-color: $color-white-warm;
+}
+
+.section-callAction{
+    grid-column: full-start / full-end;
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end] minmax(6rem,1fr);
+}
+
+.callAction{
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    &__text{
+        font-size: 2rem;
+        
+        @include respond(phone){
+            font-size: 1.4rem;
+        }
+    }
+    &__btn{
+        justify-self: center;
+    }
+}
+.section-pricing{
+    padding: 10rem 0;
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: minmax(6rem,1fr) repeat(8, 1fr) minmax(6rem,1fr);
+    
+}

@@ -1,0 +1,46 @@
+.block{
+    grid-column: col-start 5 / full-end;
+    padding: 5rem 10rem 15rem 10rem; 
+    display: grid;
+    grid-row-gap: 3rem;
+    background-color: $color-white-warm;
+    justify-content: center;
+    align-items: start;
+    
+    @include respond(tab-port){
+        grid-column: full-start / full-end;
+        padding: 2rem 5rem 10rem 5rem; 
+    }
+    &__title{
+        font-size: 7rem;
+        font-weight: 700;
+
+        @include respond(phone){
+            font-size: 5rem;
+        }
+    }
+
+    &__italic{
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 300;
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text{
+        font-size: 3rem;
+        font-weight: 300;
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
+        &--lobster{
+            font-family: $font-focus;
+        }
+
+        &--roboto{
+            font-family: $font-primary;
+        }
+    }
+}

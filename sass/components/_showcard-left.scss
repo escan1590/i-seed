@@ -1,0 +1,99 @@
+.showcard-left{
+    grid-column: full-start / full-end;
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(7,6vw);
+
+    @include respond(tab-land){
+        grid-template-rows: repeat(7,minmax(6vw,7.5vw));
+    }
+
+    @include respond(tab-port){
+        min-height: 70rem;
+    }
+    
+    @include respond(phone){
+        grid-column: 1 / -1;
+        min-height: 45rem;
+        margin: 5rem 0;
+        padding: 0 2rem;
+    }
+    &__text-box{
+        background-color: $color-white-warm;
+        grid-column: 3 / -1;
+        grid-row: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 5rem 5rem 5rem 15rem;
+
+        @include respond(tab-land){
+            padding: 5rem 5rem 5rem 12rem;
+            justify-content: space-evenly;  
+        }
+        
+        @include respond(tab-port){
+            grid-column: 1 / -1 ;
+            grid-row: 2 / -1;
+            height: 60rem;
+            margin: 10rem 0;
+            padding: 25rem 5rem 5rem 5rem;
+        }
+
+        @include respond(phone){
+            height: 50rem;
+            padding: 16.5rem 2rem 5rem 2rem;
+            margin: 2rem 0;
+        }
+    }
+
+    &__text{
+        font-size: 2rem;
+        @include respond(tab-land){
+            font-size: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        @include respond(phone){
+            font-size: 1.4rem;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        font-size: 1.8rem;
+        font-weight: 500;
+        @include respond(tab-land){
+            font-size: 1.5rem;
+        }
+        @include respond(phone){
+            font-size: 1.2rem;
+        }
+    }
+
+    &__itemli{
+        padding-bottom: 5px;
+    }
+
+    &__item{
+        grid-column: 1 / 4;
+        grid-row: 2/ 7;
+        @include respond(tab-port){
+            grid-column: 2 / 8 ;
+            grid-row: 1/ 4;
+        }
+    }
+
+    &__img{
+        width: 90%;
+        height: 110%;
+        transform: translateY(-5%);
+        display: block;
+        object-fit: cover;
+        @include respond(tab-port){
+            height: 210%;
+            width: 120%;
+            transform: translateX(-8.5%) translateY(-1rem);;
+        }
+    }
+}
