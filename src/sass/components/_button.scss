@@ -1,0 +1,32 @@
+.btn{
+    border:none;
+    border-radius: 0;
+    display: inline-block;
+    width: 30rem;
+    padding: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $color-primary-dark;
+    color:#fff;
+    transition: all .4s;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1rem;
+    @include respond(tab-land){
+        font-size: 1.3rem;
+        width: 25rem;
+        padding: 1.8rem;
+    }
+
+    @include respond(phone){
+        width: 100%;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+    
+    &:hover{
+        background-color: $color-button-hover;
+        
+    }
+}

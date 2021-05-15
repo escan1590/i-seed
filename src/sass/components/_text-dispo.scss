@@ -1,0 +1,31 @@
+.text-dispo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    grid-column: 2 / 10;
+    font-size: 2rem;
+    grid-gap: 5rem;
+    padding: 3rem 10rem;
+    @include respond(phone){
+        grid-column: 1 / -1;
+        font-size: 1.2rem;
+        padding: 1.5rem 2rem;
+    }
+    &__left{
+        transform: translateY(-1.5rem);
+        
+        @include respond(phone){
+            transform: translateY(0);
+        }
+    }
+
+    &__right{
+        transform: translateY(1.5rem);
+        @include respond(phone){
+            transform: translateY(0);
+        }
+    }
+
+    &__strong{
+        font-weight: 700;
+    }
+}

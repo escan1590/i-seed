@@ -1,0 +1,39 @@
+.motive{
+    grid-column: 2 / 10;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    line-height: 1;
+    grid-gap: 3rem;
+    
+    @include respond(phone){
+        grid-column: 1 / -1;
+    }
+    &__line{
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        @include respond(phone){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__heading-3--modif{
+        grid-column: 1 / -1;
+        @include respond(phone){
+            font-size: 2rem;
+        }
+    }
+
+    &__logo{
+        grid-column: 1 / -1;
+        width: 30rem;
+    }
+
+    &__heading-2--modif{
+        grid-column: 1 / -1;
+        @include respond(phone){
+            font-size: 1.8rem;
+        }
+    }
+
+}

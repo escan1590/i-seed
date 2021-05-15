@@ -1,0 +1,12 @@
+.showcase{
+    grid-column: 4 / 8;
+    display: grid;
+    grid-row-gap: 1rem;
+
+    @include respond(tab-port){
+        grid-column: 2 / 10;
+    }
+    &__text{
+        font-size: 2rem;
+    }
+}

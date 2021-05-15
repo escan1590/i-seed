@@ -1,0 +1,21 @@
+.transition{
+    grid-column: 2 / 10;
+    display: grid;
+    grid-row: repeat(2,1fr);
+    grid-gap: 5rem;
+    justify-items: center;
+    
+    &__arrow{
+        justify-self: center;
+        font-size: 8rem;
+        color: $color-primary;
+    }
+
+    &__text{
+        font-size: 3rem;
+        color: $color-primary-dark;
+        font-weight: 500;
+        justify-self: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,12 @@
+.registration-form{
+    grid-column: 2 / 10;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+
+    @include respond(tab-port){
+        grid-column: 1 / -1;
+        padding: 0 3rem;
+    }
+} 

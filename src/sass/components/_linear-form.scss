@@ -1,0 +1,43 @@
+.linear-form{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2,2fr) 1fr;
+    max-width: 80rem;
+    margin: 0 auto;
+    @include respond(tab-port){
+        width: 100%;
+        padding: 5rem 8rem;
+        grid-row-gap: 2rem;
+    }
+    @include respond(tab-port){
+        padding: 5rem 0rem;
+    }
+    
+    &__input{
+        padding-left: 2rem;
+        
+        @include respond(tab-port){
+            grid-column: 1 / -1;
+            height: 5rem;
+            width: 100%;
+            border: 1px solid $color-grey-dark;
+            border-radius: 5px;
+
+            &::placeholder{
+                text-transform: capitalize;
+            }
+        }
+        
+    }
+    &__btn{
+        width: 15rem;
+        height: 100%;
+        align-self: center;
+        margin: 0;
+        @include respond(tab-port){
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: 100%;
+        }
+    }
+}

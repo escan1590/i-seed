@@ -1,0 +1,55 @@
+%heading{
+    font-family: $font-focus;
+    font-weight: 400;
+}
+
+.heading-1{
+    @extend %heading;
+    font-size: 4rem;
+    @include respond(tab-land){
+        font-size: 3rem;
+    }
+}
+
+.heading-2{
+    @extend %heading;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    @include respond(tab-land){
+        font-size: 2.8rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+}
+
+.heading-3{
+    @extend %heading;
+    font-family: $font-primary;
+    font-size: 2rem;
+    color: $color-h3;
+    text-transform: uppercase;
+    @include respond(tab-land){
+        font-size: 1.7rem;
+    }
+    @include respond(tab-phone){
+        font-size: 1.2rem;
+    }
+}
+.heading-4{
+    @extend %heading;
+    font-size: 3.5rem;
+    text-align: center;
+    @include respond(phone){
+        font-size: 2.3rem;
+    }
+}
+
+.heading-6{
+    @extend %heading;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-primary-dark;
+}

@@ -1,0 +1,124 @@
+.mobile{
+	
+	width: 100%;
+	background-color: $color-primary-light;
+	overflow: hidden;
+	position: relative;
+    display: none;
+    grid-column: 1 / -1;
+
+    @include respond(tab-port){
+        display: inline-block;
+    }
+}
+
+.mobile .header{
+	background-color: $color-primary-light;
+	color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.line{
+	width: 5rem;
+	height: 2px;
+	margin: 2rem 5rem 0 2rem;
+    background-color: $color-primary-dark;
+    justify-self: end;
+    align-self: center;
+    
+    @include respond(phone){
+        width: 3rem;
+        margin: 1rem 2rem;
+    }
+    
+}
+
+.menu-toggle{
+    display:grid;
+    z-index: 2000;
+    outline:none;
+    padding: 5rem 0;
+    backface-visibility: none;
+}
+
+.menu-toggle:hover{
+	cursor: pointer;
+}
+
+.mobile-nav ul{
+	padding: 0;
+	margin: 0;
+    list-style-type: none;
+    @include respond(phone){
+        margin-top: 5rem;
+    }
+}
+
+.mobile-two{
+	background: #8a43a3;
+    background: -webkit-linear-gradient(#8a43a3, #5c6bac); 
+    background: -o-linear-gradient(#8a43a3, #5c6bac); 
+    background: -moz-linear-gradient(#8a43a3, #5c6bac); 
+    background: linear-gradient(#8a43a3, #5c6bac);
+}
+
+.mobile-two .mobile-nav{
+	background-color: $color-primary-light;
+	width: 100%;
+	
+	display: grid;
+    text-align: center;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    z-index: 1000;
+    place-items: center;
+    grid-row-gap: 2rem;
+    opacity: 0;
+    transform: translateY(20rem);
+    transition: all .8s ease-out;
+    visibility: hidden;
+    pointer-events: none;
+
+    
+}
+
+.visible{
+    pointer-events: all !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.mobile-two .mobile-nav li a{
+	color: $color-primary-dark;
+	display: block;
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    text-decoration:none;
+    transition: filter .2s;
+    @include respond(phone){
+        font-size: 1.5rem;
+    }
+    &:hover{
+        filter: brightness(80%);
+    }
+}
+
+.mobile-nav__logo{
+    position: absolute;
+    padding: 2rem 0;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3000;
+    @include respond(phone){
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 45%;
+    }
+}
+

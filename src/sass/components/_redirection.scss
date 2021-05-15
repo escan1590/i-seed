@@ -1,0 +1,11 @@
+.redirection{
+    color: $color-notice;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    transition: filter .5s ease;
+    display: inline-block;
+    width: 25%;
+    &:hover{
+        filter: brightness(80%);
+    }
+}
